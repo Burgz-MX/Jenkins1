@@ -14,3 +14,11 @@ pipeline {
     stage('Run') {
       steps {
         sh 'java Hello'
+      }
+    }
+  }
+  post {
+    success { echo 'SUCCESS ' }
+    failure { echo 'FAILURE ' }
+  }
+}
